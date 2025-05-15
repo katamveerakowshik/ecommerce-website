@@ -47,4 +47,4 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Visit http://127.0.0.1:8000/ to see the website. 
+Visit https://ecommerce-website-vp44.onrender.com to see the website. 
