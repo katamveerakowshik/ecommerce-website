@@ -1,13 +1,6 @@
 # E-commerce Website
 
-A Django-based e-commerce website with features similar to Amazon.
-
-## Features
-- User authentication (login, register, profile)
-- Product catalog with categories
-- Shopping cart functionality
-- Order management
-- Responsive design using Bootstrap
+A Django-based e-commerce website with features similar to Amazon
 
 ## Setup Instructions
 
