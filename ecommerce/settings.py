@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-your-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-website-b12c.onrender.com']
+ALLOWED_HOSTS = ['ecommerce-website-b12c.onrender.com' ,'127.0.0.1']
 
 
 # Application definition
@@ -82,6 +82,8 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+#postgresql://ecommerce_u864_user:QFsvRuxHAD4XtYedKu7upkoDfxtG52XT@dpg-d0j2oa95pdvs73ek7dbg-a.oregon-postgres.render.com/ecommerce_u864
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -89,6 +91,7 @@ DATABASES = {
     }
 }
 
+DATABASES["default"] = dj_database_url.parse("postgresql://ecommerce_u864_user:QFsvRuxHAD4XtYedKu7upkoDfxtG52XT@dpg-d0j2oa95pdvs73ek7dbg-a.oregon-postgres.render.com/ecommerce_u864")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
