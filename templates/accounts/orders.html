@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Orders - E-Store{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Order History</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    You haven't placed any orders yet. <a href="{% url 'store:product_list' %}" class="alert-link">Start shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

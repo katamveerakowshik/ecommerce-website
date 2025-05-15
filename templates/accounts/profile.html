@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile - E-Store{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Profile Information</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-user-circle fa-5x text-primary"></i>
+                </div>
+                <h5 class="card-title">{{ user.username }}</h5>
+                <p class="card-text">
+                    <strong>Email:</strong> {{ user.email|default:"Not provided" }}<br>
+                    <strong>Date Joined:</strong> {{ user.date_joined|date:"F j, Y" }}
+                </p>
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Recent Orders</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    You haven't placed any orders yet. <a href="{% url 'store:product_list' %}" class="alert-link">Start shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
